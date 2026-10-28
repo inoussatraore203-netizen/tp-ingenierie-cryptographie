@@ -1,0 +1,15 @@
+# Secrets et artefacts generes : ne jamais publier de cle privee
+*.key
+*.csr
+*.srl
+*.pem
+*.crl
+*.old
+*.attr
+tp2-pki/*.crt
+tp2-pki/racine/
+tp2-pki/inter/
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/

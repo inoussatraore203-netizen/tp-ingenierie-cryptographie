@@ -1,0 +1,39 @@
+# inter.cnf - AC intermediaire : signe les certificats de serveur et de client
+[ ca ]
+default_ca = CA_inter
+
+[ CA_inter ]
+dir               = ./inter
+database          = $dir/index.txt
+new_certs_dir     = $dir/newcerts
+serial            = $dir/serial
+crlnumber         = $dir/crlnumber
+certificate       = $dir/inter.crt
+private_key       = $dir/inter.key
+default_md        = sha256
+default_days      = 90
+default_crl_days  = 7
+unique_subject    = no
+policy            = policy_feuille
+copy_extensions   = copy
+crl_extensions    = ext_crl
+
+[ policy_feuille ]
+commonName        = supplied
+
+[ ext_serveur ]
+basicConstraints       = critical,CA:FALSE
+keyUsage               = critical,digitalSignature
+extendedKeyUsage       = serverAuth
+subjectKeyIdentifier   = hash
+authorityKeyIdentifier = keyid,issuer
+
+[ ext_client ]
+basicConstraints       = critical,CA:FALSE
+keyUsage               = critical,digitalSignature
+extendedKeyUsage       = clientAuth
+subjectKeyIdentifier   = hash
+authorityKeyIdentifier = keyid,issuer
+
+[ ext_crl ]
+authorityKeyIdentifier = keyid:always
