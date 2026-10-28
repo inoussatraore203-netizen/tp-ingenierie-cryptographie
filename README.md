@@ -12,7 +12,7 @@ Le rapport complet est dans [`docs/Rapport_final.pdf`](docs/Rapport_final.pdf).
 | `tp3-tls/` | nginx en mTLS, supervision (`surveiller.py`), renouvellement (`renouveler.sh`) |
 
 ## Prérequis
-Ubuntu 24.04 (ou équivalent), Python ≥ 3.10, OpenSSL ≥ 3.0, nginx (TP 3 uniquement).
+openEuler (OS gratuit et open source basé sur Linux) ou autre machine lunix, Python ≥ 3.10, OpenSSL ≥ 3.0, nginx (TP 3 uniquement).
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
