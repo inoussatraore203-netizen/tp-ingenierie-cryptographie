@@ -16,7 +16,6 @@ openEuler (OS gratuit et open source basé sur Linux) ou autre machine lunix, Py
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
 ```
 
 ## TP 1 – Chiffrement authentifié
