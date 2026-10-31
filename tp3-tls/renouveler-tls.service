@@ -1,6 +1,0 @@
-[Unit]
-Description=Renouvellement du certificat TLS du serveur
-[Service]
-Type=oneshot
-Environment=PKI=/opt/pki
-ExecStart=/usr/local/sbin/renouveler.sh
